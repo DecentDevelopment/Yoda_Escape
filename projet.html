@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+    <head>
+		<meta charset="utf-8">
+		<title>Yoda Escape</title>
+		<link rel="icon" href="title-icon.png" type="image/x-icon">
+		<link href="stylesheet.css" rel="stylesheet" type="text/css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+
+	</head>
+	<body>
+		
+		<div class="header">
+			<img src="icon-1.png" id="icon-1" alt="image 1 header">
+			<h1>Yoda Escape</h1>
+			<img src="icon-2.png" id="icon-2" alt="image 2 header">
+		</div>
+		
+		<div class="main" id="main">
+			<div class="home">
+				<h2>Bienvenue dans Yoda Escape !</h2>
+				<p>Votre objectif : Echappez du vaisseau sans tomber dans les pièges. Bonne Chance!</p>
+				<div class="home-items-start">
+					<div class="home-items">
+						<h3>Choississez votre personnage :</h3>
+							<div class="choix-skin">
+								<div class="bouton-choix-skin">
+									<div>
+									<input type="radio" name="1" onclick="im('a1');" id="vert" checked>
+									<label for="vert">Yoda Vert</label>
+									</div>
+									<div>
+									<input type="radio" name="1" onclick="im('a2');" >
+									<label for="rouge">Yoda Rouge</label>
+									</div>
+								</div>
+							<img src="pixel-yoda-vert-a0.png" id="skin-view" alt="">
+						</div>
+					</div>
+					<div class="box-choixpv-start">
+					<li><output id="force_output" for="Carac">Force : 10</output>
+                <input type="range" name="Carac" id="Carac" min="-40" max="40" step="10" value="0">
+                <output id="vie_output" for="Carac">Vie : 10</output></li>
+					<button>START</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="level">
+			<div class="level-yoda">
+				<img src="pixel-yoda-vert-a0.png" id="skin" alt="">
+				<div class="yoda-info">
+					<div class="yoda-info-vie">
+						<img src="icon-vie.png" alt="image d'icone vie">
+						<h4 id="vie">50</h4>
+					</div>
+					<div class="yoda-info-force">
+						<img src="icon-force.png" alt="image d'icone force">
+						<h4 id="force">50</h4>
+					</div>
+				</div>
+				<div id="sabre"><img src="icon-force.png" id="img-sabre" alt="image sabre laser"><h4>Sabre Laser Collecté</h4></div>
+			</div>
+			<div id="canvas">
+				<canvas id="dungeon" width="480" height="480">
+                    <img src="Dungeon.png" width="480" height="480" alt="The dungeon">
+                </canvas> 
+			</div>
+			<div class="choices-level">
+				<p id="txt_zone">Vous devez sortir d'ici</p>
+				<div class="button-level">
+					<h3>Faite votre choix :</h3>
+					<div id="choices">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="info" id="info">
+			<div class="credit">
+				<h3>Crédits:</h3>
+				<p>Créé par de jeunes développeurs</p>
+			</div>
+		</div>
+
+		<div class="game-over" id="game-over">
+			<h1>Game Over</h1>
+			<div class="button-game-over">
+				<button id="go-button-menu">Menu</button>
+				<button id="go-button-recom">Recommencer</button>
+			</div>
+		</div>
+
+		<div class="win" id="win">
+			<h1>Vous vous êtes échappé</h1>
+			<div class="button-win">
+				<button id="win-button-menu">Menu</button>
+				<button id="win-button-recom">Recommencer</button>
+			</div>
+		</div>
+		
+		
+	</body>
+	<script src = 'projetjs.js'>
+	</script>
+</html>
+
